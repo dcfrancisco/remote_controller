@@ -2,20 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_joystick/flutter_joystick.dart';
 
 class JoystickControls extends StatelessWidget {
+  const JoystickControls({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Container(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
+            gradient: const LinearGradient(
               colors: [Colors.blue, Colors.purple],
             ),
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: Colors.white, width: 2),
           ),
-          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-          child: Text(
+          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+          child: const Text(
             'PilotPro',
             style: TextStyle(
               fontSize: 24,
@@ -33,13 +35,13 @@ class JoystickControls extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(5.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: 150,
-                    width: 150,
+                    height: 300,
+                    width: 300,
                     child: Joystick(
                       mode: JoystickMode.all,
                       listener: (details) {
@@ -50,15 +52,15 @@ class JoystickControls extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(width: 100), // Space between the two columns of controls
+            const SizedBox(width: 100),
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(5.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: 150,
-                    width: 150,
+                    height: 300,
+                    width: 300,
                     child: Joystick(
                       mode: JoystickMode.all,
                       listener: (details) {
