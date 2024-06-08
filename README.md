@@ -1,6 +1,6 @@
 To update the `README.md` file for your Flutter project, you can include the following sections:
 
-1. **Project Title and Description**
+1. **Bluetooth Controller**
 2. **Features**
 3. **Installation Instructions**
 4. **Usage**
@@ -11,7 +11,7 @@ Here's an example of how you can structure your `README.md` file:
 
 ### `README.md`:
 ```markdown
-# GameController App
+# JoystickController App
 
 A versatile game controller app designed to control various types of vehicles such as cars, robots, planes, boats, and drones. The app features intuitive joystick controls and buttons for firing and weapon selection.
 
@@ -27,8 +27,8 @@ A versatile game controller app designed to control various types of vehicles su
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/GameControllerApp.git
-   cd GameControllerApp
+   git clone https://github.com/dcfrancisco/remote_controller.git
+   cd remote_controller
    ```
 
 2. **Install dependencies:**
