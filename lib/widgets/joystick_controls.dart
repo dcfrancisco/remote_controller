@@ -30,49 +30,47 @@ class JoystickControls extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    height: 300,
-                    width: 300,
-                    child: Joystick(
-                      mode: JoystickMode.all,
-                      listener: (details) {
-                        print('x: ${details.x}, y: ${details.y}');
-                      },
-                    ),
+      body: Column(
+        children: [
+          const Spacer(flex: 1),
+          Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 250,
+                  height: 250,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.blueGrey.shade900,
                   ),
-                ],
-              ),
-            ),
-            const SizedBox(width: 100),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    height: 300,
-                    width: 300,
-                    child: Joystick(
-                      mode: JoystickMode.all,
-                      listener: (details) {
-                        print('x: ${details.x}, y: ${details.y}');
-                      },
-                    ),
+                  child: Joystick(
+                    mode: JoystickMode.all,
+                    listener: (details) {
+                      print('x: ${details.x}, y: ${details.y}');
+                    },
                   ),
-                ],
-              ),
+                ),
+                const SizedBox(width: 150),
+                Container(
+                  width: 250,
+                  height: 250,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.blueGrey.shade900,
+                  ),
+                  child: Joystick(
+                    mode: JoystickMode.all,
+                    listener: (details) {
+                      print('x: ${details.x}, y: ${details.y}');
+                    },
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+          const Spacer(flex: 2),
+        ],
       ),
     );
   }
